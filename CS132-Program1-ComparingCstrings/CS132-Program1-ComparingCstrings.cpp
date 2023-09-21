@@ -19,15 +19,13 @@ if arg1 == arg2 returns zero
 int length(const char* str)
 {
     int len;
-    for (len = 0; str[len] != '\0'; len++)
-    {
+    for (len = 0; str[len] != '\0'; len++) {}
         return len;
-    }
 }
 
 int compareTo(const char* lstr, const char* rstr)
 {
-
+    return 0;
 }
 
 
@@ -56,8 +54,10 @@ int main()
     cout << "comparing " << str2 << " & " << str5 << " " << compareTo(str2, str5) << endl;
 
 #ifdef _WIN32
+    cout << endl;
     system("pause");
 #else
+    cout << endl;
     cout << "Press any key to continue . . . ";
     cin.get();
 #endif
