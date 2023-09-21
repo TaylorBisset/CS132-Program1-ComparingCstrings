@@ -20,7 +20,9 @@ int length(const char* str)
 {
     int len;
     for (len = 0; str[len] != '\0'; len++)
+    {
         return len;
+    }
 }
 
 int compareTo(const char* lstr, const char* rstr)
