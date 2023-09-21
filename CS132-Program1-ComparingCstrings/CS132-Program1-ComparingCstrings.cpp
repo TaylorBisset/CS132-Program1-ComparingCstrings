@@ -77,3 +77,22 @@ int main()
 #endif
     return 0;
 }
+
+/*
+batman 6
+cat 3
+cast 4
+catagory 8
+ZIP 3
+comparing batman & cat -1
+comparing cat & batman 1
+comparing cast & cat 1
+comparing cat & cast -1
+comparing catagory & cat 1
+comparing cat & catagory -1
+comparing cat & cat 0
+comparing cat & ZIP -1
+comparing ZIP & cat 1
+
+Press any key to continue . . .
+*/
