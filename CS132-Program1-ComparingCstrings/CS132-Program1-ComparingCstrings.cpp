@@ -16,8 +16,18 @@ if arg1 > arg2 returns a positive number
 if arg1 == arg2 returns zero
 */
 
-int compareTo(const char* lstr, const char* rstr);  // needs to be written
-int length(const char* str);                        // needs to be written
+int length(const char* str)
+{
+    int len;
+    for (len = 0; str[len] != '\0'; len++)
+        return len;
+}
+
+int compareTo(const char* lstr, const char* rstr)
+{
+
+}
+
 
 int main()
 {
@@ -28,7 +38,7 @@ int main()
     char str5[] = "ZIP";
 
     cout << "batman " << length(str1) << endl;
-    cout << "cat " << length(str2) << endl;
+    cout << "cat "    << length(str2) << endl;
 
     cout << "comparing " << str1 << " & " << str2 << " " << compareTo(str1, str2) << endl;
     cout << "comparing " << str2 << " & " << str1 << " " << compareTo(str2, str1) << endl;
