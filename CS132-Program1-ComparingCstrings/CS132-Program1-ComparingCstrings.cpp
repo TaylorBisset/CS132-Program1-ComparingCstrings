@@ -12,4 +12,12 @@
 int main()
 {
     std::cout << "Hello World!\n";
+
+#ifdef _WIN32
+    system("pause");
+#else
+    cout << "Press any key to continue . . . ";
+    cin.get();
+#endif
+    return 0;
 }
