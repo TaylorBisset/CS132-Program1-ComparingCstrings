@@ -16,18 +16,28 @@ if arg1 > arg2 returns a positive number
 if arg1 == arg2 returns zero
 */
 
+int compareTo(const char* lstr, const char* rstr)
+{
+    if (lstr < rstr)
+    {
+        return -1;
+    }
+    else if (lstr > rstr)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
 int length(const char* str)
 {
     int len;
     for (len = 0; str[len] != '\0'; len++) {}
-        return len;
+    return len;
 }
-
-int compareTo(const char* lstr, const char* rstr)
-{
-    return 0;
-}
-
 
 int main()
 {
@@ -37,8 +47,11 @@ int main()
     char str4[] = "catagory";
     char str5[] = "ZIP";
 
-    cout << "batman " << length(str1) << endl;
-    cout << "cat "    << length(str2) << endl;
+    cout << "batman "   << length(str1) << endl;
+    cout << "cat "      << length(str2) << endl;
+    cout << "cast "     << length(str3) << endl;
+    cout << "catagory " << length(str4) << endl;
+    cout << "ZIP "      << length(str5) << endl;
 
     cout << "comparing " << str1 << " & " << str2 << " " << compareTo(str1, str2) << endl;
     cout << "comparing " << str2 << " & " << str1 << " " << compareTo(str2, str1) << endl;
@@ -52,6 +65,7 @@ int main()
     cout << "comparing " << str2 << " & " << str2 << " " << compareTo(str2, str2) << endl;
 
     cout << "comparing " << str2 << " & " << str5 << " " << compareTo(str2, str5) << endl;
+    cout << "comparing " << str5 << " & " << str2 << " " << compareTo(str5, str2) << endl;
 
 #ifdef _WIN32
     cout << endl;
