@@ -3,7 +3,7 @@
 // Section:      A
 // Assignment:   P1
 // Description:  Without the use of cstring functions, 
-//               this program alphabatizes the given strings
+//               this program alphabetizes the given strings
 ////
 
 #include <iostream>
@@ -57,13 +57,13 @@ int main()
     char str1[] = "batman";
     char str2[] = "cat";
     char str3[] = "cast";
-    char str4[] = "catagory";
+    char str4[] = "category";
     char str5[] = "ZIP";
 
     cout << "batman "   << length(str1) << endl;
     cout << "cat "      << length(str2) << endl;
     cout << "cast "     << length(str3) << endl;
-    cout << "catagory " << length(str4) << endl;
+    cout << "category " << length(str4) << endl;
     cout << "ZIP "      << length(str5) << endl;
 
     cout << "comparing " << str1 << " & " << str2 << " " << compareTo(str1, str2) << endl;
@@ -101,8 +101,8 @@ comparing batman & cat -1
 comparing cat & batman 1
 comparing cast & cat -1
 comparing cat & cast 1
-comparing catagory & cat 1
-comparing cat & catagory -1
+comparing category & cat 1
+comparing cat & category -1
 comparing cat & cat 0
 comparing cat & ZIP 1
 comparing ZIP & cat -1
