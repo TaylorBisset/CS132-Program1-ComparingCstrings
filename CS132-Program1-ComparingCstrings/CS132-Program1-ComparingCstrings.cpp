@@ -16,32 +16,40 @@ if arg1 > arg2 returns a positive number
 if arg1 == arg2 returns zero
 */
 
-int compareTo(const char* lstr, const char* rstr)
-{
-    while (lstr != '\0' && rstr != '\0')
-    {
-        if (lstr < rstr)
-        {
-            return -1;
-        }
-        else if (lstr > rstr)
-        {
-            return 1;
-        }
-        else
-        {
-            return 0;
-        }
-        lstr++;
-        rstr++;
-    }
-}
-
 int length(const char* str)
 {
     int len;
     for (len = 0; str[len] != '\0'; len++) {}
     return len;
+}
+
+int compareTo(const char* lstr, const char* rstr)
+{
+    while (*lstr != '\0' && *rstr != '\0')
+    {
+        if (*lstr < *rstr)
+        {
+            return -1;
+        }
+        else if (*lstr > *rstr)
+        {
+            return 1;
+        }
+        lstr++;
+        rstr++;
+    }
+    if (length(lstr) < length(rstr))
+    {
+        return -1;
+    }
+    else if (length(lstr) > length(rstr))
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
 }
 
 int main()
@@ -91,13 +99,13 @@ catagory 8
 ZIP 3
 comparing batman & cat -1
 comparing cat & batman 1
-comparing cast & cat 1
-comparing cat & cast -1
+comparing cast & cat -1
+comparing cat & cast 1
 comparing catagory & cat 1
 comparing cat & catagory -1
 comparing cat & cat 0
-comparing cat & ZIP -1
-comparing ZIP & cat 1
+comparing cat & ZIP 1
+comparing ZIP & cat -1
 
 Press any key to continue . . .
 */
