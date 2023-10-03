@@ -18,17 +18,22 @@ if arg1 == arg2 returns zero
 
 int compareTo(const char* lstr, const char* rstr)
 {
-    if (lstr < rstr)
+    while (lstr != '\0' && rstr != '\0')
     {
-        return -1;
-    }
-    else if (lstr > rstr)
-    {
-        return 1;
-    }
-    else
-    {
-        return 0;
+        if (lstr < rstr)
+        {
+            return -1;
+        }
+        else if (lstr > rstr)
+        {
+            return 1;
+        }
+        else
+        {
+            return 0;
+        }
+        lstr++;
+        rstr++;
     }
 }
 
