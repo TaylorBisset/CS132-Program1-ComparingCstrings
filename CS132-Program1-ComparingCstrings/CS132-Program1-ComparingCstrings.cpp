@@ -95,7 +95,7 @@ int main()
 batman 6
 cat 3
 cast 4
-catagory 8
+category 8
 ZIP 3
 comparing batman & cat -1
 comparing cat & batman 1
